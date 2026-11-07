@@ -1,0 +1,10 @@
+---
+# Deploy automático para o HostGator/cPanel.
+# Se o document root de ahh.net.br for uma subpasta, troque a linha
+# DEPLOYPATH abaixo (ex.: /home/davi6336/public_html/ahh.net.br/).
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/davi6336/public_html/
+    - /bin/cp -f index.php $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH
+    - /bin/cp -Rf config includes pages public $DEPLOYPATH
