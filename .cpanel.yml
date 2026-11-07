@@ -1,10 +1,11 @@
 ---
 # Deploy para o document root do HostGator.
-# Testa os caminhos possíveis e copia para os que existirem,
-# cobrindo domínio principal, addon/subdomínio e subpasta.
+# Usa $HOME para não depender do caminho fixo da conta (/home1/davi6336).
 deployment:
   tasks:
-    - export D1=/home/davi6336/ahh.net.br
-    - export D2=/home/davi6336/public_html/ahh.net.br
-    - export D3=/home/davi6336/public_html
-    - for D in $D1 $D2 $D3; do if [ -d "$D" ]; then echo "deploy em $D"; /bin/cp -f index.php "$D"; /bin/cp -f .htaccess "$D"; /bin/cp -Rf config includes pages public "$D"; fi; done
+    - export D="$HOME/ahh.net.br"
+    - if [ ! -d "$D" ]; then export D="$HOME/public_html/ahh.net.br"; fi
+    - if [ ! -d "$D" ]; then export D="$HOME/public_html"; fi
+    - echo "Deploy em $D"
+    - /bin/cp -f index.php .htaccess "$D"
+    - /bin/cp -Rf config includes pages public "$D"
