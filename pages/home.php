@@ -9,7 +9,7 @@ if (!defined('APP_INIT')) {
 }
 ?>
 <section class="hero">
-    <h1>Bem Vindo ao Meu Mundo</h1>
+    <h1>Bem-vindo ao Meu Mundo Novo</h1>
     <p>
         Um esqueleto institucional em PHP puro, modular, seguro e pronto
         para a hospedagem compartilhada.
