@@ -1,0 +1,5 @@
+.env
+.opencode/
+*.log
+node_modules/
+vendor/
