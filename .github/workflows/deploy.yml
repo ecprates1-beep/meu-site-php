@@ -7,15 +7,25 @@ on:
 
 jobs:
   deploy:
-    name: FTP Deploy
+    name: Build & FTP Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: Enviar arquivos via FTP
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Enviar build via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -23,16 +33,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           port: 21
-          local-dir: ./
+          local-dir: ./dist/
           server-dir: /
           exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/.env
-            **/.env.example
-            **/.cpanel.yml
-            **/AGENTS.md
-            **/*.log
-            **/.opencode/**
             **/.ftp-deploy-sync-state.json

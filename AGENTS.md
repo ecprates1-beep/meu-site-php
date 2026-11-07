@@ -1,4 +1,7 @@
 # Diretrizes do Projeto
-- Linguagem: PHP puro (sem frameworks pesados) compatível com PHP 8.1+ da HostGator.
-- Estrutura: MVC simples ou páginas modulares com pasta `public/` e includes (`header.php`, `footer.php`).
-- Segurança: Sanitização com `htmlspecialchars()`, PDO para banco MySQL e prevenção contra SQL Injection.
+- Stack: Vite + React + TypeScript + Tailwind CSS (build estático em `dist/`).
+- Animações: framer-motion; ícones: lucide-react.
+- Conteúdo do portfólio: `src/data/cases.ts`; assets em `static/`.
+- Deploy: GitHub Actions (`.github/workflows/deploy.yml`) builda e envia `dist/` via FTP para a HostGator.
+- Acessibilidade: HTML semântico, alt descritivo, foco visível e respeito a `prefers-reduced-motion`.
+- Legado PHP (`index.php`, `config/`, `includes/`, `pages/`, `public/`) não é mais utilizado.
