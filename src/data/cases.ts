@@ -22,7 +22,7 @@ export const cases: PortfolioCase[] = [
     id: 'nabil-bonduki',
     name: 'Nabil Bonduki',
     role: 'Vereador',
-    year: '2022',
+    year: '2012/2024',
     bgColor: '#961C49',
     image: '/images/cases/nabil.jpg',
     imagePlaceholder: 'NB',

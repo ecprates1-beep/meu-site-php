@@ -3,34 +3,30 @@ import type { PortfolioCase } from '../data/cases'
 
 type CaseCardProps = {
   item: PortfolioCase
+  index: number
 }
 
-export function CaseCard({ item }: CaseCardProps) {
+export function CaseCard({ item, index }: CaseCardProps) {
   const reduce = useReducedMotion()
 
   return (
     <motion.article
-      whileHover={reduce ? undefined : { y: -6 }}
-      className="group relative overflow-hidden rounded-2xl shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-2xl"
+      initial={reduce ? false : { opacity: 0 }}
+      whileInView={reduce ? undefined : { opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="relative w-full overflow-hidden"
       style={{ backgroundColor: item.bgColor }}
     >
-      <div className="relative aspect-[5/4] overflow-hidden">
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 flex items-center justify-center font-display text-5xl text-white/20"
-        >
-          {item.imagePlaceholder}
-        </span>
-        <img
-          src={item.image}
-          alt={`${item.name} — ${item.role} ${item.year}`}
-          width={1200}
-          height={960}
-          loading="lazy"
-          decoding="async"
-          className="relative h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-        />
-      </div>
+      <img
+        src={item.image}
+        alt={`${item.name} — ${item.role} ${item.year}`}
+        width={1200}
+        height={960}
+        loading={index === 0 ? 'eager' : 'lazy'}
+        decoding="async"
+        className="block h-auto w-full"
+      />
     </motion.article>
   )
 }
