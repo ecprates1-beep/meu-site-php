@@ -1,30 +1,31 @@
+const links = [
+  { label: 'Sobre', href: '#top', active: true },
+  { label: 'Campanhas', href: '#portfolio', active: false },
+  { label: 'Juventude', href: '#contato', active: false },
+]
+
 export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 sm:px-8">
-        <a
-          href="#top"
-          aria-label="AHH — início"
-          className="inline-flex items-center rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
-        >
-          <img src="/logo.png" alt="AHH" className="h-12 w-auto" />
-        </a>
-
-        <nav aria-label="Navegação principal" className="hidden items-center gap-8 sm:flex">
+      <nav
+        aria-label="Navegação principal"
+        className="flex items-center justify-center gap-5 px-6 py-6 sm:gap-9 sm:py-8"
+      >
+        {links.map((link) => (
           <a
-            href="#portfolio"
-            className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/60 transition-colors hover:text-white"
+            key={link.label}
+            href={link.href}
+            aria-current={link.active ? 'page' : undefined}
+            className={
+              link.active
+                ? 'border-b-[3px] border-accent pb-0.5 font-display text-sm uppercase leading-none tracking-wide text-white sm:text-base'
+                : 'font-display text-sm uppercase leading-none tracking-wide text-white/80 transition-colors hover:text-accent sm:text-base'
+            }
           >
-            Portfólio
+            {link.label}
           </a>
-          <a
-            href="#contato"
-            className="text-[11px] font-semibold uppercase tracking-[0.3em] text-white/60 transition-colors hover:text-white"
-          >
-            Contato
-          </a>
-        </nav>
-      </div>
+        ))}
+      </nav>
     </header>
   )
 }
