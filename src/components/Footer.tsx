@@ -28,6 +28,10 @@ export function Footer() {
           <p>© {new Date().getFullYear()} AHH. Todos os direitos reservados.</p>
           <a
             href="#top"
+            onClick={(event) => {
+              event.preventDefault()
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
             className="inline-flex items-center gap-2 transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
           >
             Voltar ao topo
