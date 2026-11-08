@@ -12,6 +12,8 @@ export default {
         muted: '#4B5563',
         paper: '#F9FAFB',
         accent: '#F3FF00',
+        cream: '#FFFDF3',
+        charcoal: '#29292C',
       },
     },
   },

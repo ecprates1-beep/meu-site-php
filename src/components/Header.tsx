@@ -1,6 +1,7 @@
 import { Link, usePathname } from '../lib/router'
 
 const links = [
+  { label: 'Home', href: '/' },
   { label: 'Sobre', href: '/sobre' },
   { label: 'Campanhas', href: '/#portfolio' },
   { label: 'Juventude', href: '/#contato' },
@@ -11,9 +12,16 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-20">
+      {pathname === '/sobre' && (
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 via-black/35 to-transparent"
+          aria-hidden="true"
+        />
+      )}
+
       <nav
         aria-label="Navegação principal"
-        className="flex items-center justify-center gap-5 px-6 py-6 sm:gap-9 sm:py-8"
+        className="relative flex items-center justify-center gap-5 px-6 py-6 sm:gap-9 sm:py-8"
       >
         {links.map((link) => {
           const active = link.href === pathname
