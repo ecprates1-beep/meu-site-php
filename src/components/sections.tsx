@@ -112,7 +112,6 @@ type ServicesStripProps = {
 
 export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
   const [open, setOpen] = useState<string | null>(null)
-  const current = services.find((service) => service.id === open) ?? null
   const gridClass = columns === 5 ? 'grid-cols-2 sm:grid-cols-5' : 'grid-cols-2 sm:grid-cols-4'
 
   return (
@@ -143,40 +142,42 @@ export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
                 type="button"
                 onClick={() => setOpen(active ? null : service.id)}
                 aria-expanded={active}
-                aria-controls="servico-detalhe"
+                aria-controls={`servico-detalhe-${service.id}`}
                 className="w-full py-3.5 text-center text-lg text-white/90 transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent sm:text-xl"
               >
                 {active ? 'fechar −' : 'saiba+'}
               </button>
+
+              {active && (
+                <div
+                  id={`servico-detalhe-${service.id}`}
+                  className="bg-cream px-5 py-8 sm:px-6"
+                >
+                  <h3
+                    className="text-xl font-semibold sm:text-2xl"
+                    style={{ color: readableColor(service.color) }}
+                  >
+                    {service.title}
+                  </h3>
+                  <ul className="mt-5 grid gap-y-3 text-sm text-charcoal sm:text-base">
+                    {service.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <Check
+                          className="mt-1 h-4 w-4 shrink-0"
+                          aria-hidden="true"
+                          style={{ color: readableColor(service.color) }}
+                        />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )
         })}
       </div>
 
-      {current && (
-        <div id="servico-detalhe" className="bg-cream">
-          <div className="mx-auto max-w-5xl px-6 py-10 sm:px-8">
-            <h3
-              className="text-xl font-semibold sm:text-2xl"
-              style={{ color: readableColor(current.color) }}
-            >
-              {current.title}
-            </h3>
-            <ul className="mt-5 grid gap-x-8 gap-y-3 text-sm text-charcoal sm:grid-cols-2 sm:text-base">
-              {current.items.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check
-                    className="mt-1 h-4 w-4 shrink-0"
-                    aria-hidden="true"
-                    style={{ color: readableColor(current.color) }}
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
     </section>
   )
 }
