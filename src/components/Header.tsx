@@ -4,15 +4,16 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'Sobre', href: '/sobre' },
   { label: 'Campanhas', href: '/#portfolio' },
-  { label: 'Juventude', href: '/#contato' },
+  { label: 'Juventude', href: '/juventude' },
 ]
 
 export function Header() {
   const pathname = usePathname()
+  const isInternal = pathname !== '/'
 
   return (
     <header className="absolute inset-x-0 top-0 z-20">
-      {pathname === '/sobre' && (
+      {isInternal && (
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/70 via-black/35 to-transparent"
           aria-hidden="true"

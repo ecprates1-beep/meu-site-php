@@ -1,5 +1,9 @@
-import { useState, type ReactNode } from 'react'
-import { Check } from 'lucide-react'
+import {
+  SectionDivider,
+  ServicesStrip,
+  SplitSection,
+  type ServiceItem,
+} from '../components/sections'
 
 const CONTACT_PHONES = [
   { label: '11 98447 3678', href: 'tel:+5511984473678' },
@@ -17,7 +21,7 @@ const WORK_MODES = [
   { title: 'Formação e Treinamento', description: 'Para equipar sua equipe.' },
 ]
 
-const SERVICES = [
+const SERVICES: ServiceItem[] = [
   {
     id: 'digital',
     title: 'Comunicação Digital',
@@ -69,141 +73,17 @@ const SERVICES = [
   },
 ]
 
-function Staircase({ color, className = '' }: { color: string; className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 72 40"
-      fill="currentColor"
-      aria-hidden="true"
-      className={className}
-      style={{ color }}
-    >
-      <rect x="0" y="24" width="22" height="16" />
-      <rect x="25" y="12" width="22" height="16" />
-      <rect x="50" y="0" width="22" height="16" />
-    </svg>
-  )
-}
-
-function Divider() {
-  return (
-    <div className="flex justify-center bg-cream py-3" aria-hidden="true">
-      <img src="/star.png" alt="" className="h-5 w-5 sm:h-6 sm:w-6" />
-    </div>
-  )
-}
-
-type SectionProps = {
-  id: string
-  title: string
-  image: string
-  color: string
-  children: ReactNode
-}
-
-function Section({ id, title, image, color, children }: SectionProps) {
-  return (
-    <section aria-labelledby={`${id}-title`} className="bg-cream">
-      <div className="grid lg:h-[clamp(430px,60vw,900px)] lg:grid-cols-2">
-        <img
-          src={image}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          className="h-auto w-full object-cover lg:h-full"
-        />
-
-        <div className="relative flex items-center px-6 py-14 sm:px-10 lg:px-0 lg:py-0">
-          <div className="w-full max-w-[22rem] lg:ml-[13vw]">
-            <h2 id={`${id}-title`} className="sr-only">
-              {title}
-            </h2>
-            {children}
-          </div>
-
-          <Staircase
-            color={color}
-            className="absolute bottom-8 right-6 h-8 w-14 sm:right-10 lg:bottom-10 lg:right-12 lg:h-9 lg:w-16"
-          />
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Services() {
-  const [open, setOpen] = useState<string | null>(null)
-  const current = SERVICES.find((service) => service.id === open) ?? null
-
-  return (
-    <section aria-labelledby="servicos-title" className="bg-black">
-      <h2 id="servicos-title" className="sr-only">
-        Serviços
-      </h2>
-
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-        {SERVICES.map((service) => {
-          const active = open === service.id
-
-          return (
-            <div key={service.id} className="bg-charcoal">
-              <img
-                src={service.image}
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-                decoding="async"
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <button
-                type="button"
-                onClick={() => setOpen(active ? null : service.id)}
-                aria-expanded={active}
-                aria-controls="servico-detalhe"
-                className="w-full py-3.5 text-center text-lg text-white/90 transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent sm:text-xl"
-              >
-                {active ? 'fechar −' : 'saiba +'}
-              </button>
-            </div>
-          )
-        })}
-      </div>
-
-      {current && (
-        <div id="servico-detalhe" className="bg-cream">
-          <div className="mx-auto max-w-5xl px-6 py-10 sm:px-8">
-            <h3
-              className="text-xl font-semibold sm:text-2xl"
-              style={{ color: current.color === '#FFFC00' ? '#8A8824' : current.color }}
-            >
-              {current.title}
-            </h3>
-            <ul className="mt-5 grid gap-x-8 gap-y-3 text-sm text-charcoal sm:grid-cols-2 sm:text-base">
-              {current.items.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check
-                    className="mt-1 h-4 w-4 shrink-0"
-                    aria-hidden="true"
-                    style={{ color: current.color === '#FFFC00' ? '#8A8824' : current.color }}
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
-    </section>
-  )
-}
-
 export function Sobre() {
   return (
     <div className="bg-cream text-charcoal">
       <h1 className="sr-only">Sobre a AHH — Comunicação Política</h1>
 
-      <Section id="essencia" title="Nossa essência" image="/images/sobre/quem-somos.png" color="#FF3E00">
+      <SplitSection
+        id="essencia"
+        title="Nossa essência"
+        image="/images/sobre/quem-somos.png"
+        color="#FF3E00"
+      >
         <p className="text-[clamp(1.5rem,2.7vw,2.6rem)] leading-[1.18]">
           Somos apaixonados por <strong className="font-semibold text-[#FF3E00]">política</strong> e
           acreditamos que a boa{' '}
@@ -212,25 +92,30 @@ export function Sobre() {
           <strong className="font-semibold text-[#FF3E00]">coração</strong> do{' '}
           <strong className="font-semibold text-[#FF3E00]">eleitor</strong>.
         </p>
-      </Section>
+      </SplitSection>
 
-      <Divider />
+      <SectionDivider />
 
-      <Section id="metodologia" title="Nossa metodologia" image="/images/sobre/metodologia.png" color="#00CF87">
+      <SplitSection
+        id="metodologia"
+        title="Nossa metodologia"
+        image="/images/sobre/metodologia.png"
+        color="#00CF87"
+      >
         <ul className="text-[clamp(1.35rem,2.2vw,2rem)] leading-[1.35]">
           {METHOD_STEPS.map((step) => (
             <li key={step}>{step}</li>
           ))}
         </ul>
-      </Section>
+      </SplitSection>
 
-      <Divider />
+      <SectionDivider />
 
-      <Services />
+      <ServicesStrip services={SERVICES} columns={4} />
 
-      <Divider />
+      <SectionDivider />
 
-      <Section
+      <SplitSection
         id="como-trabalhamos"
         title="Como trabalhamos"
         image="/images/sobre/como-trabalhamos.png"
@@ -244,11 +129,16 @@ export function Sobre() {
             </li>
           ))}
         </ul>
-      </Section>
+      </SplitSection>
 
-      <Divider />
+      <SectionDivider />
 
-      <Section id="contatos" title="Nossos contatos" image="/images/sobre/contatos.png" color="#6F00FF">
+      <SplitSection
+        id="contatos"
+        title="Nossos contatos"
+        image="/images/sobre/contatos.png"
+        color="#6F00FF"
+      >
         <ul className="space-y-1 text-[clamp(1.15rem,1.8vw,1.75rem)] leading-snug">
           {CONTACT_PHONES.map((phone) => (
             <li key={phone.href}>
@@ -270,7 +160,7 @@ export function Sobre() {
           </li>
           <li>{CONTACT_CITY}</li>
         </ul>
-      </Section>
+      </SplitSection>
     </div>
   )
 }
