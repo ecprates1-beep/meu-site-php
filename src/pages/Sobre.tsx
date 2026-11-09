@@ -83,6 +83,7 @@ export function Sobre() {
         title="Nossa essência"
         image="/images/sobre/quem-somos.png"
         color="#FF3E00"
+        ratio={0.888}
       >
         <p className="text-[clamp(1.5rem,2.7vw,2.6rem)] leading-[1.18]">
           Somos apaixonados por <strong className="font-semibold text-[#FF3E00]">política</strong> e
@@ -101,6 +102,7 @@ export function Sobre() {
         title="Nossa metodologia"
         image="/images/sobre/metodologia.png"
         color="#00CF87"
+        ratio={0.888}
       >
         <ul className="text-[clamp(1.35rem,2.2vw,2rem)] leading-[1.35]">
           {METHOD_STEPS.map((step) => (
@@ -120,6 +122,7 @@ export function Sobre() {
         title="Como trabalhamos"
         image="/images/sobre/como-trabalhamos.png"
         color="#025FFF"
+        ratio={0.888}
       >
         <ul className="space-y-3 text-[clamp(1.15rem,1.7vw,1.55rem)] leading-snug">
           {WORK_MODES.map((mode) => (
@@ -138,6 +141,7 @@ export function Sobre() {
         title="Nossos contatos"
         image="/images/sobre/contatos.png"
         color="#6F00FF"
+        ratio={0.888}
       >
         <ul className="space-y-1 text-[clamp(1.15rem,1.8vw,1.75rem)] leading-snug">
           {CONTACT_PHONES.map((phone) => (

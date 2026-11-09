@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react'
+import { useState, type CSSProperties, type ReactNode } from 'react'
 import { Check } from 'lucide-react'
 
 export type ServiceItem = {
@@ -59,6 +59,7 @@ type SplitSectionProps = {
   color: string
   align?: 'center' | 'bottom'
   contentClassName?: string
+  ratio?: number
   children: ReactNode
 }
 
@@ -69,11 +70,15 @@ export function SplitSection({
   color,
   align = 'center',
   contentClassName = 'w-full max-w-[22rem] lg:ml-[13vw]',
+  ratio = 0.8,
   children,
 }: SplitSectionProps) {
   return (
     <section aria-labelledby={`${id}-title`} className="bg-cream">
-      <div className="grid lg:h-[clamp(430px,60vw,900px)] lg:grid-cols-2">
+      <div
+        className="grid lg:h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-cols-2"
+        style={{ '--split-ratio': ratio } as CSSProperties}
+      >
         <img
           src={image}
           alt=""

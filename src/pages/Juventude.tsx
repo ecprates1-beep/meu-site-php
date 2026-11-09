@@ -92,6 +92,7 @@ export function Juventude() {
         title="Investindo na juventude"
         image="/images/juventude/investindo.png"
         color="#FF0075"
+        ratio={0.888}
         align="bottom"
         contentClassName="w-full max-w-[30rem] lg:ml-[11vw] lg:mr-[10vw]"
       >
@@ -121,6 +122,7 @@ export function Juventude() {
         title="Tamo junto"
         image="/images/juventude/tamo-junto.png"
         color="#00CF87"
+        ratio={0.888}
         align="bottom"
         contentClassName="w-full max-w-[28rem] lg:ml-[11vw] lg:mr-[10vw]"
       >
@@ -150,6 +152,7 @@ export function Juventude() {
         title="Regras de entrada"
         image="/images/juventude/regras-de-entrada.png"
         color="#025FFF"
+        ratio={0.888}
         align="bottom"
         contentClassName="w-full max-w-[40rem] lg:ml-[9.5vw] lg:mr-[10vw]"
       >
