@@ -79,14 +79,16 @@ export function SplitSection({
         className="grid lg:h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-cols-2"
         style={{ '--split-ratio': ratio } as CSSProperties}
       >
-        <img
-          src={image}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          className="h-auto w-full object-cover lg:h-full"
-        />
+        <div className="bg-charcoal">
+          <img
+            src={image}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            className="h-auto w-full object-contain lg:h-full"
+          />
+        </div>
 
         <div
           className={`relative flex px-6 py-14 sm:px-10 lg:px-0 lg:py-0 ${
