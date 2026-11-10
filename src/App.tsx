@@ -14,6 +14,7 @@ import { Ze } from './pages/Ze'
 import { Dilma } from './pages/Dilma'
 import { Haddad } from './pages/Haddad'
 import { Guajajara } from './pages/Guajajara'
+import { Congresso } from './pages/Congresso'
 import { usePathname } from './lib/router'
 
 const STATIC_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
@@ -31,6 +32,7 @@ const CASE_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
   '/dilma': { title: 'Dilma Rousseff', element: <Dilma /> },
   '/haddad': { title: 'Fernando Haddad', element: <Haddad /> },
   '/guajajara': { title: 'Sônia Guajajara', element: <Guajajara /> },
+  '/congresso': { title: 'Congresso do Povo', element: <Congresso /> },
 }
 
 const ROUTES = { ...STATIC_ROUTES, ...CASE_ROUTES }

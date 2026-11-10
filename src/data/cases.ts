@@ -100,6 +100,16 @@ export const cases: PortfolioCase[] = [
     href: '/haddad',
   },
   {
+    id: 'congresso-do-povo',
+    name: 'Congresso do Povo',
+    role: 'Movimento',
+    year: '2026',
+    bgColor: '#3E1E6E',
+    image: '/images/cases/congresso.png',
+    imagePlaceholder: 'CP',
+    href: '/congresso',
+  },
+  {
     id: 'sonia-guajajara',
     name: 'Sonia Guajajara',
     role: 'Federal',
