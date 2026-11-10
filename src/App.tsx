@@ -3,7 +3,7 @@ import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Portfolio } from './components/Portfolio'
 import { Footer } from './components/Footer'
-import { Sobre } from './pages/Sobre'
+import { Servicos } from './pages/Servicos'
 import { Juventude } from './pages/Juventude'
 import { Marina } from './pages/Marina'
 import { Nabil } from './pages/Nabil'
@@ -18,7 +18,7 @@ import { Congresso } from './pages/Congresso'
 import { usePathname } from './lib/router'
 
 const STATIC_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
-  '/sobre': { title: 'Sobre', element: <Sobre /> },
+  '/servicos': { title: 'Serviços', element: <Servicos /> },
   '/juventude': { title: 'Juventude', element: <Juventude /> },
 }
 

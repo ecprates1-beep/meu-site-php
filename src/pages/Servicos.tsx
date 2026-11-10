@@ -73,10 +73,10 @@ const SERVICES: ServiceItem[] = [
   },
 ]
 
-export function Sobre() {
+export function Servicos() {
   return (
     <div className="bg-cream text-charcoal">
-      <h1 className="sr-only">Sobre a AHH — Comunicação Política</h1>
+      <h1 className="sr-only">Serviços da AHH — Comunicação Política</h1>
 
       <SplitSection
         id="essencia"

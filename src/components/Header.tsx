@@ -2,7 +2,7 @@ import { Link, usePathname } from '../lib/router'
 
 const links = [
   { label: 'Home', href: '/' },
-  { label: 'Sobre', href: '/sobre' },
+  { label: 'Serviços', href: '/servicos' },
   { label: 'Campanhas', href: '/#portfolio' },
   { label: 'Juventude', href: '/juventude' },
 ]
