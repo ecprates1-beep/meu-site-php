@@ -10,8 +10,8 @@ export function Footer() {
           <div className="max-w-md">
             <img src="/logo.png" alt="AHH" className="h-10 w-auto" />
             <p className="mt-5 text-sm leading-relaxed text-white/50">
-              Inteligência de dados, criação de conteúdo e mobilização para campanhas vitoriosas e
-              mandatos potentes.
+              Você recebe o essencial para crescer com consistência: estratégia, conteúdo,
+              mobilização digital e formação.
             </p>
           </div>
 
