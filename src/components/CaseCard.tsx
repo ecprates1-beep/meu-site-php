@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import { Link } from '../lib/router'
 import type { PortfolioCase } from '../data/cases'
 
 type CaseCardProps = {
@@ -9,7 +10,7 @@ type CaseCardProps = {
 export function CaseCard({ item, index }: CaseCardProps) {
   const reduce = useReducedMotion()
 
-  return (
+  const content = (
     <motion.article
       initial={reduce ? false : { opacity: 0 }}
       whileInView={reduce ? undefined : { opacity: 1 }}
@@ -29,4 +30,14 @@ export function CaseCard({ item, index }: CaseCardProps) {
       />
     </motion.article>
   )
+
+  if (item.href) {
+    return (
+      <Link href={item.href} aria-label={`Ver case ${item.name}`} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+        {content}
+      </Link>
+    )
+  }
+
+  return content
 }

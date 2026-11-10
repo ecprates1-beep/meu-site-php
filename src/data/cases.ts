@@ -6,6 +6,7 @@ export type PortfolioCase = {
   bgColor: string
   image: string
   imagePlaceholder: string
+  href?: string
 }
 
 export const cases: PortfolioCase[] = [
@@ -17,6 +18,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#004433',
     image: '/images/cases/marina.jpg',
     imagePlaceholder: 'MS',
+    href: '/marina',
   },
   {
     id: 'nabil-bonduki',
@@ -26,6 +28,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#961C49',
     image: '/images/cases/nabil.jpg',
     imagePlaceholder: 'NB',
+    href: '/nabil',
   },
   {
     id: 'luna-zarattini',
@@ -35,6 +38,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#963E01',
     image: '/images/cases/luna.jpg',
     imagePlaceholder: 'LZ',
+    href: '/luna',
   },
   {
     id: 'eduardo-zanatta',
@@ -44,6 +48,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#003C86',
     image: '/images/cases/zanatta.jpg',
     imagePlaceholder: 'EZ',
+    href: '/zanatta',
   },
   {
     id: 'paulo-teixeira',
@@ -53,6 +58,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#907A00',
     image: '/images/cases/paulo.jpg',
     imagePlaceholder: 'PT',
+    href: '/paulo',
   },
   {
     id: 'ze-dirceu',
@@ -62,6 +68,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#A1142D',
     image: '/images/cases/ze.jpg',
     imagePlaceholder: 'ZD',
+    href: '/ze',
   },
   {
     id: 'simao-pedro',
@@ -80,6 +87,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#A1143C',
     image: '/images/cases/dilma.jpg',
     imagePlaceholder: 'DR',
+    href: '/dilma',
   },
   {
     id: 'fernando-haddad',
@@ -89,6 +97,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#002C8D',
     image: '/images/cases/haddad.jpg',
     imagePlaceholder: 'FH',
+    href: '/haddad',
   },
   {
     id: 'sonia-guajajara',
@@ -98,5 +107,6 @@ export const cases: PortfolioCase[] = [
     bgColor: '#00493C',
     image: '/images/cases/guajajara.jpg',
     imagePlaceholder: 'SG',
+    href: '/guajajara',
   },
 ]

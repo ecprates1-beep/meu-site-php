@@ -5,26 +5,51 @@ import { Portfolio } from './components/Portfolio'
 import { Footer } from './components/Footer'
 import { Sobre } from './pages/Sobre'
 import { Juventude } from './pages/Juventude'
+import { Marina } from './pages/Marina'
+import { Nabil } from './pages/Nabil'
+import { Luna } from './pages/Luna'
+import { Zanatta } from './pages/Zanatta'
+import { Paulo } from './pages/Paulo'
+import { Ze } from './pages/Ze'
+import { Dilma } from './pages/Dilma'
+import { Haddad } from './pages/Haddad'
+import { Guajajara } from './pages/Guajajara'
 import { usePathname } from './lib/router'
+
+const STATIC_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
+  '/sobre': { title: 'Sobre', element: <Sobre /> },
+  '/juventude': { title: 'Juventude', element: <Juventude /> },
+}
+
+const CASE_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
+  '/marina': { title: 'Marina Silva', element: <Marina /> },
+  '/nabil': { title: 'Nabil Bonduki', element: <Nabil /> },
+  '/luna': { title: 'Luna Zarattini', element: <Luna /> },
+  '/zanatta': { title: 'Eduardo Zanatta', element: <Zanatta /> },
+  '/paulo': { title: 'Paulo Teixeira', element: <Paulo /> },
+  '/ze': { title: 'Zé Dirceu', element: <Ze /> },
+  '/dilma': { title: 'Dilma Rousseff', element: <Dilma /> },
+  '/haddad': { title: 'Fernando Haddad', element: <Haddad /> },
+  '/guajajara': { title: 'Sônia Guajajara', element: <Guajajara /> },
+}
+
+const ROUTES = { ...STATIC_ROUTES, ...CASE_ROUTES }
 
 export default function App() {
   const pathname = usePathname()
-  const isSobre = pathname === '/sobre'
-  const isJuventude = pathname === '/juventude'
+  const route = ROUTES[pathname]
 
   useEffect(() => {
-    document.title = isSobre
-      ? 'Sobre — AHH Comunicação Política'
-      : isJuventude
-        ? 'Juventude — AHH Comunicação Política'
-        : 'AHH — Comunicação Política 360'
-  }, [isSobre, isJuventude])
+    document.title = route
+      ? `${route.title} — AHH Comunicação Política`
+      : 'AHH — Comunicação Política 360'
+  }, [route])
 
   return (
     <div className="min-h-screen bg-paper text-ink">
       <Header />
       <main>
-        {isSobre ? <Sobre /> : isJuventude ? <Juventude /> : <><Hero /><Portfolio /></>}
+        {route ? route.element : <><Hero /><Portfolio /></>}
       </main>
       <Footer />
     </div>
