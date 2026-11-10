@@ -1,6 +1,6 @@
-import { ArrowUp, Mail } from 'lucide-react'
+import { ArrowUp, MessageCircle } from 'lucide-react'
 
-const CONTACT_EMAIL = 'contato@ahh.net.br'
+const CONTACT_WHATSAPP_HREF = 'https://wa.me/5511977743781'
 
 export function Footer() {
   return (
@@ -16,10 +16,12 @@ export function Footer() {
           </div>
 
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
+            href={CONTACT_WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex w-fit items-center gap-3 rounded-full border border-white/25 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-white transition-colors hover:border-white hover:bg-white hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
           >
-            <Mail className="h-4 w-4" aria-hidden="true" />
+            <MessageCircle className="h-4 w-4" aria-hidden="true" />
             Fale com a gente
           </a>
         </div>

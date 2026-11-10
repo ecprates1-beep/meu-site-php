@@ -1,3 +1,4 @@
+import { MessageCircle } from 'lucide-react'
 import {
   SectionDivider,
   ServicesStrip,
@@ -5,14 +6,43 @@ import {
   type ServiceItem,
 } from '../components/sections'
 
-const CONTACT_PHONES = [
-  { label: '11 98447 3678', href: 'tel:+5511984473678' },
-  { label: '11 98148 3848', href: 'tel:+5511981483848' },
-]
-const CONTACT_EMAIL = 'ahh@gmail.com'
+const CONTACT_WHATSAPP_LABEL = '(11) 97774-3781'
+const CONTACT_WHATSAPP_HREF = 'https://wa.me/5511977743781'
 const CONTACT_CITY = 'São Paulo/SP'
 
-const METHOD_STEPS = ['Pesquisa', 'Diagnóstico', 'Estratégia', 'Gestão']
+const METHOD_STEPS: { title: string; description: string }[] = [
+  {
+    title: 'Pesquisa',
+    description:
+      'Escutamos o território, o público e o cenário para entender onde estamos pisando.',
+  },
+  {
+    title: 'Diagnóstico',
+    description:
+      'Transformamos os dados em leitura clara dos problemas, das oportunidades e do ponto de partida.',
+  },
+  {
+    title: 'Estratégia',
+    description:
+      'Definimos o caminho: mensagem, canais e prioridades para chegar onde queremos.',
+  },
+  {
+    title: 'Gestão',
+    description:
+      'Acompanhamos a execução do início ao fim, ajustando a rota com base nos resultados.',
+  },
+  {
+    title: 'Produção de conteúdo',
+    description:
+      'Audiovisual, jingle, rádio e TV, design gráfico, sites, redes e material impresso: da ideia à entrega.',
+  },
+  {
+    title: 'Tráfego pago',
+    description:
+      'Impulsionamento nas redes para levar sua mensagem a quem precisa ouvir.',
+  },
+]
+
 
 const WORK_MODES = [
   { title: 'Orientação Pontual', description: 'Para demandas específicas.' },
@@ -34,6 +64,7 @@ const SERVICES: ServiceItem[] = [
       'Monitoramento e análise de dados',
       'Gestão de WhatsApp e canais de mobilização',
       'Desenvolvimento de sites e landing pages',
+      'Jingle e produção de áudio',
     ],
   },
   {
@@ -55,7 +86,6 @@ const SERVICES: ServiceItem[] = [
     color: '#FFFC00',
     items: [
       'Produção de material gráfico (santinhos, adesivos, bandeiras)',
-      'Jingle e produção de áudio',
       'Eventos e comícios',
     ],
   },
@@ -104,9 +134,14 @@ export function Servicos() {
         color="#00CF87"
         ratio={0.888}
       >
-        <ul className="text-[clamp(1.35rem,2.2vw,2rem)] leading-[1.35]">
+        <ul className="flex flex-col gap-2 text-[clamp(1.15rem,1.7vw,1.5rem)] leading-[1.35]">
           {METHOD_STEPS.map((step) => (
-            <li key={step}>{step}</li>
+            <li key={step.title}>
+              <span className="font-semibold">{step.title}</span>
+              <span className="block text-[0.85em] leading-[1.3] opacity-80">
+                {step.description}
+              </span>
+            </li>
           ))}
         </ul>
       </SplitSection>
@@ -143,23 +178,26 @@ export function Servicos() {
         color="#6F00FF"
         ratio={0.888}
       >
-        <ul className="space-y-1 text-[clamp(1.15rem,1.8vw,1.75rem)] leading-snug">
-          {CONTACT_PHONES.map((phone) => (
-            <li key={phone.href}>
-              <a
-                href={phone.href}
-                className="transition-colors hover:text-[#6F00FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F00FF] focus-visible:ring-offset-4 focus-visible:ring-offset-cream"
-              >
-                {phone.label}
-              </a>
-            </li>
-          ))}
+        <ul className="space-y-5 text-[clamp(1.15rem,1.8vw,1.75rem)] leading-snug">
           <li>
             <a
-              href={`mailto:${CONTACT_EMAIL}`}
+              href={CONTACT_WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               className="transition-colors hover:text-[#6F00FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F00FF] focus-visible:ring-offset-4 focus-visible:ring-offset-cream"
             >
-              {CONTACT_EMAIL}
+              WhatsApp: {CONTACT_WHATSAPP_LABEL}
+            </a>
+          </li>
+          <li>
+            <a
+              href={CONTACT_WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border-2 border-[#6F00FF] px-7 py-2.5 font-display text-[0.9em] uppercase leading-none tracking-wide text-[#6F00FF] transition-colors duration-300 hover:bg-[#6F00FF] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F00FF] focus-visible:ring-offset-4 focus-visible:ring-offset-cream"
+            >
+              <MessageCircle className="h-[1.2em] w-[1.2em]" aria-hidden="true" />
+              Conversar no WhatsApp
             </a>
           </li>
           <li>{CONTACT_CITY}</li>
