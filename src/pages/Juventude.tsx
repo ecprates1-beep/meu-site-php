@@ -1,9 +1,7 @@
 import {
   PageHeroBand,
   SectionDivider,
-  ServicesStrip,
   SplitSection,
-  type ServiceItem,
 } from '../components/sections'
 
 const RULES = [
@@ -27,59 +25,6 @@ const RULES = [
   {
     label: 'ALINHAMENTO',
     text: 'Compromisso com renovação política, transparência e boas práticas.',
-  },
-]
-
-const SERVICES: ServiceItem[] = [
-  {
-    id: 'trafego',
-    title: 'Tráfego Pago Segmentado',
-    image: '/images/juventude/trafego-pago.png',
-    color: '#FF3F00',
-    items: [
-      'Impulsionamento segmentado para alcance e captação.',
-      'Análise de dados e otimização das campanhas.',
-    ],
-  },
-  {
-    id: 'formacao',
-    title: 'Formação e Mentoria',
-    image: '/images/juventude/formacao-mentoria.png',
-    color: '#982AFF',
-    items: [
-      'Encontros periódicos de formação em comunicação e estratégia.',
-      'Mentoria coletiva ou individual para a sua trajetória.',
-    ],
-  },
-  {
-    id: 'gestao',
-    title: 'Gestão de Redes Sociais',
-    image: '/images/juventude/gestao-redes.png',
-    color: '#FFFC00',
-    items: [
-      'Produção de conteúdo orgânico para Instagram, Facebook, TikTok, X e YouTube.',
-      'Planejamento editorial e calendário de publicações.',
-    ],
-  },
-  {
-    id: 'posicionamento',
-    title: 'Posicionamento e Diagnóstico',
-    image: '/images/juventude/posicionamento-diagnostico.png',
-    color: '#00A2FF',
-    items: [
-      'Análise de redes, cenário e definição de narrativa pessoal.',
-      'Diagnóstico de imagem, público e território.',
-    ],
-  },
-  {
-    id: 'planejamento',
-    title: 'Planejamento Estratégico',
-    image: '/images/juventude/planejamento-estrategico.png',
-    color: '#00CF88',
-    items: [
-      'Metas, mensagens-chave, cronograma e territórios prioritários.',
-      'Plano de campanha e mobilização.',
-    ],
   },
 ]
 
@@ -172,8 +117,6 @@ export function Juventude() {
       </SplitSection>
 
       <SectionDivider tone="white" size="lg" />
-
-      <ServicesStrip services={SERVICES} columns={5} />
     </div>
   )
 }
