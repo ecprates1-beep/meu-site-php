@@ -18,7 +18,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-6 pb-20 pt-28 text-center sm:px-8">
         <div className="flex flex-col items-center">
           <img
-            src="/logo-hero.png"
+            src="/logo-hero-v2.png"
             alt="AHH — Comunicação Política 360°"
             width={293}
             height={356}
