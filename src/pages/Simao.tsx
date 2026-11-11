@@ -26,6 +26,10 @@ export function Simao() {
         className="px-6 py-14 sm:px-10 lg:px-[10vw] lg:py-[6vw]"
       >
         <p className="text-[clamp(1.3rem,2.2vw,2.2rem)] leading-[1.4]">
+          <strong className="font-semibold">Simão Pedro (2026)</strong>
+        </p>
+
+        <p className="mt-4 text-[clamp(1.3rem,2.2vw,2.2rem)] leading-[1.4]">
           <strong className="font-semibold">Candidato a deputado estadual</strong>
         </p>
 
