@@ -29,24 +29,29 @@ function Staircase({ color, className = '' }: { color: string; className?: strin
   )
 }
 
+export function PageHeroBand() {
+  return (
+    <div className="bg-[#323232]">
+      <div className="h-28 sm:h-36" />
+    </div>
+  )
+}
+
 type SectionDividerProps = {
   tone?: 'cream' | 'white'
   size?: 'sm' | 'lg'
 }
 
-export function SectionDivider({ tone = 'cream', size = 'sm' }: SectionDividerProps) {
-  const large = size === 'lg'
+export function SectionDivider({ tone = 'cream' }: SectionDividerProps) {
   return (
     <div
-      className={`flex justify-center ${tone === 'white' ? 'bg-white' : 'bg-cream'} ${
-        large ? 'py-8 lg:py-[2.15vw]' : 'py-3'
-      }`}
+      className={`flex justify-center ${tone === 'white' ? 'bg-white' : 'bg-cream'} py-6 lg:py-[1.6vw]`}
       aria-hidden="true"
     >
       <img
         src="/star.png"
         alt=""
-        className={large ? 'h-7 w-7 lg:h-[2.5vw] lg:w-[2.5vw]' : 'h-5 w-5 sm:h-6 sm:w-6'}
+        className="h-[18px] w-[18px] lg:h-[1.7vw] lg:w-[1.7vw]"
       />
     </div>
   )
@@ -60,6 +65,8 @@ type SplitSectionProps = {
   align?: 'center' | 'bottom'
   contentClassName?: string
   ratio?: number
+  imageBg?: string
+  imageCover?: boolean
   children: ReactNode
 }
 
@@ -71,22 +78,24 @@ export function SplitSection({
   align = 'center',
   contentClassName = 'w-full max-w-[22rem] lg:ml-[13vw]',
   ratio = 0.8,
+  imageBg,
+  imageCover = false,
   children,
 }: SplitSectionProps) {
   return (
     <section aria-labelledby={`${id}-title`} className="bg-cream">
       <div
-        className="grid lg:h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-cols-2"
+        className="grid lg:h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-2"
         style={{ '--split-ratio': ratio } as CSSProperties}
       >
-        <div className="bg-charcoal">
+        <div className={imageBg ? '' : 'bg-charcoal'} style={imageBg ? { backgroundColor: imageBg } : undefined}>
           <img
             src={image}
             alt=""
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className="h-auto w-full object-contain lg:h-full"
+            className={imageCover ? 'h-full w-full object-cover object-top' : 'h-auto w-full object-contain lg:h-full'}
           />
         </div>
 

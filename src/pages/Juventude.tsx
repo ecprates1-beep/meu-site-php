@@ -1,4 +1,5 @@
 import {
+  PageHeroBand,
   SectionDivider,
   ServicesStrip,
   SplitSection,
@@ -87,12 +88,15 @@ export function Juventude() {
     <div className="bg-cream text-charcoal">
       <h1 className="sr-only">Juventude — AHH Comunicação Política</h1>
 
+      <PageHeroBand />
+
       <SplitSection
         id="investindo"
         title="Investindo na juventude"
         image="/images/juventude/investindo.png"
         color="#FF0075"
         ratio={0.888}
+        imageBg="#323232" imageCover
         align="bottom"
         contentClassName="w-full max-w-[30rem] lg:ml-[11vw] lg:mr-[10vw]"
       >
@@ -123,6 +127,7 @@ export function Juventude() {
         image="/images/juventude/tamo-junto.png"
         color="#00CF87"
         ratio={0.888}
+        imageBg="#323232" imageCover
         align="bottom"
         contentClassName="w-full max-w-[28rem] lg:ml-[11vw] lg:mr-[10vw]"
       >
@@ -153,6 +158,7 @@ export function Juventude() {
         image="/images/juventude/regras-de-entrada.png"
         color="#025FFF"
         ratio={0.888}
+        imageBg="#323232" imageCover
         align="bottom"
         contentClassName="w-full max-w-[40rem] lg:ml-[9.5vw] lg:mr-[10vw]"
       >

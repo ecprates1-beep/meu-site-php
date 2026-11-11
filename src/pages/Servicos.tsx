@@ -1,5 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 import {
+  PageHeroBand,
   SectionDivider,
   ServicesStrip,
   SplitSection,
@@ -108,12 +109,16 @@ export function Servicos() {
     <div className="bg-cream text-charcoal">
       <h1 className="sr-only">Serviços da AHH — Comunicação Política</h1>
 
+      <PageHeroBand />
+
       <SplitSection
         id="essencia"
         title="Nossa essência"
         image="/images/sobre/quem-somos.png"
         color="#FF3E00"
         ratio={0.888}
+        imageBg="#323232"
+        imageCover
       >
         <p className="text-[clamp(1.5rem,2.7vw,2.6rem)] leading-[1.18]">
           Somos apaixonados por <strong className="font-semibold text-[#FF3E00]">política</strong> e
@@ -133,6 +138,8 @@ export function Servicos() {
         image="/images/sobre/metodologia.png"
         color="#00CF87"
         ratio={0.888}
+        imageBg="#323232"
+        imageCover
       >
         <ul className="flex flex-col gap-2 text-[clamp(1.15rem,1.7vw,1.5rem)] leading-[1.35]">
           {METHOD_STEPS.map((step) => (

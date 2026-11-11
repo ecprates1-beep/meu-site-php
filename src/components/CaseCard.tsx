@@ -26,7 +26,8 @@ export function CaseCard({ item, index }: CaseCardProps) {
         height={1080}
         loading={index === 0 ? 'eager' : 'lazy'}
         decoding="async"
-        className="block h-auto w-full"
+        className="block h-full w-full object-cover"
+        style={{ aspectRatio: '1600 / 810' }}
       />
     </motion.article>
   )
