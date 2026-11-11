@@ -85,7 +85,7 @@ export function SplitSection({
   return (
     <section aria-labelledby={`${id}-title`} className="bg-cream">
       <div
-        className="grid lg:h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-2"
+        className="grid lg:min-h-[clamp(430px,calc(50vw/var(--split-ratio)),900px)] lg:grid-rows-[minmax(0,1fr)] lg:grid-cols-2"
         style={{ '--split-ratio': ratio } as CSSProperties}
       >
         <div className={imageBg ? '' : 'bg-charcoal'} style={imageBg ? { backgroundColor: imageBg } : undefined}>
@@ -95,7 +95,7 @@ export function SplitSection({
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className={imageCover ? 'h-full w-full object-cover object-top' : 'h-auto w-full object-contain lg:h-full'}
+            className={imageCover ? 'h-auto w-full object-cover' : 'h-auto w-full object-contain lg:h-full'}
           />
         </div>
 
