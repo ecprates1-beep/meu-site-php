@@ -8,7 +8,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 sm:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-md">
-            <img src="/logo.png" alt="AHH" className="h-10 w-auto" />
+            <img src="/logo-v2.png" alt="AHH — Comunicação Política 360°" className="h-[94px] w-auto" />
             <p className="mt-5 text-sm leading-relaxed text-white/50">
               Você recebe o essencial para crescer com consistência: estratégia, conteúdo,
               mobilização digital e formação.

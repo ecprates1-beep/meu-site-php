@@ -78,6 +78,7 @@ export const cases: PortfolioCase[] = [
     bgColor: '#008A40',
     image: '/images/cases/simao.png',
     imagePlaceholder: 'SP',
+    href: '/simao',
   },
   {
     id: 'dilma-rousseff',
