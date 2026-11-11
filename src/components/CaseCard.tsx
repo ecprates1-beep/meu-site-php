@@ -22,8 +22,8 @@ export function CaseCard({ item, index }: CaseCardProps) {
       <img
         src={item.image}
         alt={`${item.name} — ${item.role} ${item.year}`}
-        width={1200}
-        height={960}
+        width={1920}
+        height={1080}
         loading={index === 0 ? 'eager' : 'lazy'}
         decoding="async"
         className="block h-auto w-full"

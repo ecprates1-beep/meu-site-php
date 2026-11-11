@@ -22,9 +22,8 @@ export function Hero() {
             alt="AHH — Comunicação Política 360°"
             width={293}
             height={356}
-            className="h-[clamp(180px,26vw,340px)] w-auto brightness-0 invert"
+            className="h-[clamp(207px,29.9vw,391px)] w-auto"
           />
-          <div className="mt-7 h-1.5 w-full bg-accent" aria-hidden="true" />
         </div>
 
         <p className="mt-9 max-w-3xl text-balance text-lg leading-snug text-white/65 sm:text-xl md:text-2xl">
