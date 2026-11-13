@@ -5,15 +5,13 @@ const CONTACT_WHATSAPP_HREF = 'https://wa.me/5511977743781'
 export function Footer() {
   return (
     <footer id="contato" className="border-t border-white/10 bg-ink text-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 sm:px-8">
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-md">
-            <img src="/logo-v2.png" alt="AHH — Comunicação Política 360°" className="h-[94px] w-auto" />
-            <p className="mt-5 text-sm leading-relaxed text-white/50">
-              Você recebe o essencial para crescer com consistência: estratégia, conteúdo,
-              mobilização digital e formação.
-            </p>
-          </div>
+      <div className="mx-auto flex max-w-xl flex-col items-center gap-8 px-6 py-14 text-center sm:px-8">
+        <div className="flex flex-col items-center gap-6">
+          <img src="/images/logo-rodape.png" alt="AHH — Comunicação Política 360°" className="h-[94px] w-auto" />
+          <p className="text-sm leading-relaxed text-white/50">
+            Você recebe o essencial para crescer com consistência: estratégia, conteúdo,
+            mobilização digital e formação.
+          </p>
 
           <a
             href={CONTACT_WHATSAPP_HREF}
@@ -26,20 +24,21 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-6 text-[11px] uppercase tracking-[0.2em] text-white/35 sm:flex-row sm:items-center">
-          <p>© {new Date().getFullYear()} AHH. Todos os direitos reservados.</p>
-          <a
-            href="#top"
-            onClick={(event) => {
-              event.preventDefault()
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }}
-            className="inline-flex items-center gap-2 transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
-          >
-            Voltar ao topo
-            <ArrowUp className="h-3.5 w-3.5" aria-hidden="true" />
-          </a>
-        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-white/10 px-6 pt-6 pb-10 text-[11px] uppercase tracking-[0.2em] text-white/35 sm:flex-row sm:items-center sm:px-8">
+        <p>© {new Date().getFullYear()} AHH. Todos os direitos reservados.</p>
+        <a
+          href="#top"
+          onClick={(event) => {
+            event.preventDefault()
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+          className="inline-flex items-center gap-2 transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-ink"
+        >
+          Voltar ao topo
+          <ArrowUp className="h-3.5 w-3.5" aria-hidden="true" />
+        </a>
       </div>
     </footer>
   )

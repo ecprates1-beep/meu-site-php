@@ -56,7 +56,53 @@ const SERVICES: ServiceItem[] = [
   {
     id: 'digital',
     title: 'Comunicação Digital',
-    image: '/images/sobre/comunicacao-digital.png',
+    image: '/images/servicos/comunicacao-digital.png',
+    color: '#FF3F00',
+    items: [
+      'Gestão de Redes Sociais (Orgânico e Pago)',
+      'Produção de Conteúdo (Vídeos, Motion, Design, Roteiros e Textos)',
+      'Gestão de Tráfego Pago e Segmentação',
+      'Monitoramento e Análise de Dados',
+    ],
+  },
+  {
+    id: 'eventos',
+    title: 'Eventos Offline',
+    image: '/images/servicos/eventos-offline.png',
+    color: '#FFFC00',
+    items: [
+      'Produção de material gráfico (santinhos, adesivos, bandeiras)',
+      'Eventos e comícios',
+    ],
+  },
+  {
+    id: 'assessoria',
+    title: 'Assessoria Imprensa',
+    image: '/images/servicos/assessoria-imprensa.png',
+    color: '#00A2FF',
+    items: [
+      'Assessoria de imprensa e relações com a mídia',
+      'Media training',
+      'Formação de lideranças e equipes',
+      'Mentoria para candidatos e gestores',
+    ],
+  },
+  {
+    id: 'inteligencia',
+    title: 'Inteligência e Estratégia',
+    image: '/images/servicos/inteligencia-estrategia.png',
+    color: '#00FF84',
+    items: [
+      'Diagnóstico e pesquisa (quali/quanti)',
+      'Planejamento estratégico de campanha',
+      'Análise de cenário e viabilidade eleitoral',
+      'Gestão de crise de imagem',
+    ],
+  },
+  {
+    id: 'gestao-redes',
+    title: 'Gestão de Redes Sociais',
+    image: '/images/servicos/gestao-redes.png',
     color: '#FF3F00',
     items: [
       'Gestão de redes sociais (orgânico e pago)',
@@ -69,37 +115,51 @@ const SERVICES: ServiceItem[] = [
     ],
   },
   {
-    id: 'inteligencia',
-    title: 'Inteligência e Estratégia',
-    image: '/images/sobre/inteligencia-estrategia.png',
-    color: '#00FF84',
+    id: 'posicionamento',
+    title: 'Posicionamento',
+    image: '/images/servicos/posicionamento.png',
+    color: '#00CF87',
     items: [
-      'Diagnóstico e pesquisa (quali/quanti)',
-      'Planejamento estratégico de campanha',
-      'Análise de cenário e viabilidade eleitoral',
-      'Gestão de crise de imagem',
+      'Análise de redes, cenário e definição de narrativa pessoal.',
     ],
   },
   {
-    id: 'offline',
-    title: 'Eventos Offline',
-    image: '/images/sobre/eventos-offline.png',
+    id: 'planejamento',
+    title: 'Planejamento Estratégico',
+    image: '/images/servicos/planejamento.png',
     color: '#FFFC00',
     items: [
-      'Produção de material gráfico (santinhos, adesivos, bandeiras)',
-      'Eventos e comícios',
+      'Metas, mensagens-chave, cronograma e territórios prioritários.',
     ],
   },
   {
-    id: 'assessoria',
-    title: 'Assessoria e Formação',
-    image: '/images/sobre/assessoria-formacao.png',
+    id: 'trafego',
+    title: 'Tráfego Pago',
+    image: '/images/servicos/trafego-pago.png',
     color: '#00A2FF',
     items: [
-      'Assessoria de imprensa e relações com a mídia',
-      'Media training',
-      'Formação de lideranças e equipes',
-      'Mentoria para candidatos e gestores',
+      'Impulsionamento segmentado para alcance e captação.',
+    ],
+  },
+  {
+    id: 'formacao',
+    title: 'Formação e Mentoria',
+    image: '/images/servicos/formacao-mentoria.png',
+    color: '#025FFF',
+    items: [
+      'Encontros periódicos de formação comunicação e estratégica (coletivos ou individuais).',
+    ],
+  },
+  {
+    id: 'manual',
+    title: 'Manual de Identidade Visual',
+    image: '/images/servicos/manual-identidade.png',
+    color: '#6F00FF',
+    items: [
+      'Criação de logo marca',
+      'Aplicações da logo',
+      'Diretrizes visuais online e offline',
+      'Brand book',
     ],
   },
 ]
@@ -155,7 +215,7 @@ export function Servicos() {
 
       <SectionDivider />
 
-      <ServicesStrip services={SERVICES} columns={4} />
+      <ServicesStrip services={SERVICES} columns={5} />
 
       <SectionDivider />
 
