@@ -104,6 +104,7 @@ export function Juventude() {
         color="#025FFF"
         ratio={0.888}
         imageBg="#323232" imageCover
+        imageStretch={false}
         align="bottom"
         contentClassName="w-full max-w-[40rem] lg:ml-[9.5vw] lg:mr-[10vw]"
       >

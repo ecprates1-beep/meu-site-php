@@ -67,6 +67,7 @@ type SplitSectionProps = {
   ratio?: number
   imageBg?: string
   imageCover?: boolean
+  imageStretch?: boolean
   children: ReactNode
 }
 
@@ -80,6 +81,7 @@ export function SplitSection({
   ratio = 0.8,
   imageBg,
   imageCover = false,
+  imageStretch = true,
   children,
 }: SplitSectionProps) {
   return (
@@ -95,7 +97,7 @@ export function SplitSection({
             aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className={imageCover ? 'h-auto w-full object-cover' : 'h-auto w-full object-contain lg:h-full'}
+            className={imageCover ? `h-auto w-full object-cover${imageStretch ? ' lg:h-full' : ''}` : 'h-auto w-full object-contain lg:h-full'}
           />
         </div>
 

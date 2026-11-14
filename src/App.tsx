@@ -11,6 +11,8 @@ import { Luna } from './pages/Luna'
 import { Zanatta } from './pages/Zanatta'
 import { Paulo } from './pages/Paulo'
 import { Simao } from './pages/Simao'
+import { Helio } from './pages/Helio'
+import { Jessy } from './pages/Jessy'
 import { Ze } from './pages/Ze'
 import { Dilma } from './pages/Dilma'
 import { Haddad } from './pages/Haddad'
@@ -29,6 +31,8 @@ const CASE_ROUTES: Record<string, { title: string; element: JSX.Element }> = {
   '/luna': { title: 'Luna Zarattini', element: <Luna /> },
   '/zanatta': { title: 'Eduardo Zanatta', element: <Zanatta /> },
   '/paulo': { title: 'Paulo Teixeira', element: <Paulo /> },
+  '/helio': { title: 'Hélio Rodrigues', element: <Helio /> },
+  '/jessy': { title: 'Jessy Dayane', element: <Jessy /> },
   '/simao': { title: 'Simão Pedro', element: <Simao /> },
   '/ze': { title: 'Zé Dirceu', element: <Ze /> },
   '/dilma': { title: 'Dilma Rousseff', element: <Dilma /> },
