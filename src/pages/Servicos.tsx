@@ -133,6 +133,18 @@ const SERVICES: ServiceItem[] = [
     ],
   },
   {
+    id: 'manual',
+    title: 'Manual de Identidade Visual',
+    image: '/images/servicos/manual-identidade.png',
+    color: '#6F00FF',
+    items: [
+      'Criação de logo marca',
+      'Aplicações da logo',
+      'Diretrizes visuais online e offline',
+      'Brand book',
+    ],
+  },
+  {
     id: 'trafego',
     title: 'Tráfego Pago',
     image: '/images/servicos/trafego-pago.png',
@@ -148,18 +160,6 @@ const SERVICES: ServiceItem[] = [
     color: '#025FFF',
     items: [
       'Encontros periódicos de formação comunicação e estratégica (coletivos ou individuais).',
-    ],
-  },
-  {
-    id: 'manual',
-    title: 'Manual de Identidade Visual',
-    image: '/images/servicos/manual-identidade.png',
-    color: '#6F00FF',
-    items: [
-      'Criação de logo marca',
-      'Aplicações da logo',
-      'Diretrizes visuais online e offline',
-      'Brand book',
     ],
   },
 ]
