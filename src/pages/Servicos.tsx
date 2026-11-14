@@ -103,7 +103,7 @@ const SERVICES: ServiceItem[] = [
     id: 'gestao-redes',
     title: 'Gestão de Redes Sociais',
     image: '/images/servicos/gestao-redes.png',
-    color: '#FF3F00',
+    color: '#FFFC00',
     items: [
       'Gestão de redes sociais (orgânico e pago)',
       'Produção de conteúdo (vídeos, motion, design, roteiros e textos)',
@@ -118,7 +118,7 @@ const SERVICES: ServiceItem[] = [
     id: 'posicionamento',
     title: 'Posicionamento',
     image: '/images/servicos/posicionamento.png',
-    color: '#00CF87',
+    color: '#025FFF',
     items: [
       'Análise de redes, cenário e definição de narrativa pessoal.',
     ],
@@ -127,7 +127,7 @@ const SERVICES: ServiceItem[] = [
     id: 'planejamento',
     title: 'Planejamento Estratégico',
     image: '/images/servicos/planejamento.png',
-    color: '#FFFC00',
+    color: '#32CD32',
     items: [
       'Metas, mensagens-chave, cronograma e territórios prioritários.',
     ],
@@ -148,7 +148,7 @@ const SERVICES: ServiceItem[] = [
     id: 'trafego',
     title: 'Tráfego Pago',
     image: '/images/servicos/trafego-pago.png',
-    color: '#00A2FF',
+    color: '#FF3F00',
     items: [
       'Impulsionamento segmentado para alcance e captação.',
     ],
@@ -157,7 +157,7 @@ const SERVICES: ServiceItem[] = [
     id: 'formacao',
     title: 'Formação e Mentoria',
     image: '/images/servicos/formacao-mentoria.png',
-    color: '#025FFF',
+    color: '#6F00FF',
     items: [
       'Encontros periódicos de formação comunicação e estratégica (coletivos ou individuais).',
     ],

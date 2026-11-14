@@ -177,7 +177,7 @@ export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
                   >
                     {service.title}
                   </h3>
-                  <ul className="mt-5 grid gap-y-3 text-sm text-charcoal sm:text-base">
+                  <ul className="mt-5 grid gap-y-3 text-sm sm:text-base">
                     {service.items.map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <Check
@@ -185,7 +185,7 @@ export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
                           aria-hidden="true"
                           style={{ color: readableColor(service.color) }}
                         />
-                        <span>{item}</span>
+                        <span style={{ color: readableColor(service.color) }}>{item}</span>
                       </li>
                     ))}
                   </ul>
