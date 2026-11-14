@@ -6,6 +6,11 @@ Options -Indexes
 
 DirectoryIndex index.html
 
+# Bloqueia arquivos sensíveis (.env, .gitignore, logs, backups, etc.)
+<FilesMatch "(^\.|composer\.(json|lock)|\.(env|ini|log|sql|bak)$)">
+    Require all denied
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
