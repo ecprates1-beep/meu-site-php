@@ -225,6 +225,8 @@ export function Servicos() {
         image="/images/sobre/como-trabalhamos.png"
         color="#025FFF"
         ratio={0.888}
+        imageBg="#323232"
+        imageCover
       >
         <ul className="space-y-3 text-[clamp(1.15rem,1.7vw,1.55rem)] leading-snug">
           {WORK_MODES.map((mode) => (
@@ -244,6 +246,8 @@ export function Servicos() {
         image="/images/sobre/contatos.png"
         color="#6F00FF"
         ratio={0.888}
+        imageBg="#323232"
+        imageCover
       >
         <ul className="space-y-5 text-[clamp(1.15rem,1.8vw,1.75rem)] leading-snug">
           <li>
