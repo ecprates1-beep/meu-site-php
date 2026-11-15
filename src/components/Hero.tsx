@@ -32,7 +32,7 @@ export function Hero() {
         </p>
 
         <motion.a
-          href="#portfolio"
+          href="/servicos"
           whileHover={reduce ? undefined : { scale: 1.04 }}
           whileTap={reduce ? undefined : { scale: 0.98 }}
           className="mt-10 inline-flex items-center justify-center border-2 border-accent px-7 py-2.5 font-display text-lg uppercase leading-none tracking-wide text-accent transition-colors duration-300 hover:bg-accent hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-black"

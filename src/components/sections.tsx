@@ -102,9 +102,9 @@ export function SplitSection({
         </div>
 
         <div
-          className={`relative flex px-6 py-14 sm:px-10 lg:px-0 lg:py-0 ${
+          className={`relative flex px-6 pt-14 sm:px-10 lg:px-0 lg:py-0 ${
             align === 'bottom' ? 'items-center lg:items-end lg:pb-[2.5vw]' : 'items-center'
-          }`}
+          } ${align === 'bottom' ? 'pb-24' : 'pb-20'}`}
         >
           <div className={contentClassName}>
             <h2 id={`${id}-title`} className="sr-only">
