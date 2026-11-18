@@ -13,6 +13,13 @@ function readableColor(color: string) {
   return color.toUpperCase() === '#FFFC00' ? '#8A8824' : color
 }
 
+function readableTextColor(color: string) {
+  const normalized = color.toUpperCase()
+  if (normalized === '#00FF84') return '#007A3D'
+  if (normalized === '#32CD32') return '#256E25'
+  return readableColor(color)
+}
+
 function Staircase({ color, className = '' }: { color: string; className?: string }) {
   return (
     <svg
@@ -173,7 +180,7 @@ export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
                 >
                   <h3
                     className="text-xl font-semibold sm:text-2xl"
-                    style={{ color: readableColor(service.color) }}
+                    style={{ color: readableTextColor(service.color) }}
                   >
                     {service.title}
                   </h3>
@@ -183,9 +190,9 @@ export function ServicesStrip({ services, columns = 4 }: ServicesStripProps) {
                         <Check
                           className="mt-1 h-4 w-4 shrink-0"
                           aria-hidden="true"
-                          style={{ color: readableColor(service.color) }}
+                          style={{ color: readableTextColor(service.color) }}
                         />
-                        <span style={{ color: readableColor(service.color) }}>{item}</span>
+                        <span style={{ color: readableTextColor(service.color) }}>{item}</span>
                       </li>
                     ))}
                   </ul>

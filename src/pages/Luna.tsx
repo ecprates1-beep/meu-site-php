@@ -15,7 +15,7 @@ export function Luna() {
       srTitle="Luna Zarattini — AHH Comunicação Política"
       headerSrc="/images/luna/luna-header.png"
       headerAlt="Luna Zarattini — Deputada Federal"
-      lead="Deputada federal eleita"
+      lead="DEPUTADA FEDERAL ELEITA"
       items={ITEMS}
       dotColor="#963E01"
     />

@@ -15,7 +15,7 @@ export function Ze() {
       srTitle="Zé Dirceu — AHH Comunicação Política"
       headerSrc="/images/ze/ze-header.png"
       headerAlt="Zé Dirceu — Deputado Federal"
-      lead="Candidato a deputado federal"
+      lead="CANDIDATO A DEPUTADO FEDERAL"
       items={ITEMS}
       dotColor="#A1142D"
     />

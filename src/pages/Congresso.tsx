@@ -15,7 +15,7 @@ export function Congresso() {
       srTitle="Congresso do Povo — AHH Comunicação Política"
       headerSrc="/images/congresso/congresso-header.png"
       headerAlt="Movimento Congresso do Povo — 2026"
-      lead="Movimento Congresso do Povo (2026)"
+      lead="MOVIMENTO CONGRESSO DO POVO"
       items={ITEMS}
       dotColor="#3E1E6E"
     />

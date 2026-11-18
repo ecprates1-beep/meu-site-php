@@ -17,8 +17,7 @@ export function Nabil() {
       srTitle="Nabil Bonduki — AHH Comunicação Política"
       headerSrc="/images/nabil/nabil-header.png"
       headerAlt="Nabil Bonduki — Vereador 2012–2024"
-      lead="Nabil Bonduki (2012 - 2024)"
-      subtitle="Vereador Eleito"
+      lead="VEREADOR ELEITO"
       items={ITEMS}
       dotColor="#961C49"
     />

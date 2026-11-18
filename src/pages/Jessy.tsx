@@ -13,8 +13,7 @@ export function Jessy() {
       srTitle="Jessy Dayane — AHH Comunicação Política"
       headerSrc="/images/jessy/jessy-header.png"
       headerAlt="Jessy Dayane — Candidata a Deputada Estadual 2026"
-      lead="Jessy Dayane (2026)"
-      subtitle="Candidata a deputada estadual"
+      lead="CANDIDATA A DEPUTADA ESTADUAL"
       items={ITEMS}
       dotColor="#8E1E5B"
     />

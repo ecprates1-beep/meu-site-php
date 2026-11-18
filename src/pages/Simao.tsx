@@ -17,8 +17,7 @@ export function Simao() {
       srTitle="Simão Pedro — AHH Comunicação Política"
       headerSrc="/images/simao/simao-header.png"
       headerAlt="Simão Pedro — Candidato a Deputado Estadual 2026"
-      lead="Simão Pedro (2026)"
-      subtitle="Candidato a deputado estadual"
+      lead="CANDIDATO A DEPUTADO ESTADUAL"
       items={ITEMS}
       dotColor="#008A40"
     />

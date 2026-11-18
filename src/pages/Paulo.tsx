@@ -17,7 +17,7 @@ export function Paulo() {
       srTitle="Paulo Teixeira — AHH Comunicação Política"
       headerSrc="/images/paulo/paulo-header.png"
       headerAlt="Paulo Teixeira — Deputado Federal"
-      lead="Candidato a deputado federal"
+      lead="CANDIDATO A DEPUTADO FEDERAL"
       items={ITEMS}
       dotColor="#907A00"
     />

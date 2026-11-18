@@ -15,7 +15,7 @@ export function Zanatta() {
       srTitle="Eduardo Zanatta — AHH Comunicação Política"
       headerSrc="/images/zanatta/zanatta-header.png"
       headerAlt="Eduardo Zanatta — Deputado Federal"
-      lead="Candidato a deputado federal"
+      lead="CANDIDATO A DEPUTADO FEDERAL"
       items={ITEMS}
       dotColor="#003C86"
     />

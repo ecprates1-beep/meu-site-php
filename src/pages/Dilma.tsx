@@ -12,8 +12,7 @@ export function Dilma() {
       srTitle="Dilma Rousseff — AHH Comunicação Política"
       headerSrc="/images/dilma/dilma-header.png"
       headerAlt="Dilma Rousseff — Mandato 2014"
-      lead="Dilma Rousseff (2014)"
-      subtitle="Mandato"
+      lead="MANDATO"
       items={ITEMS}
       dotColor="#A1143C"
     />

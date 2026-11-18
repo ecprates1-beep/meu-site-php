@@ -8,8 +8,7 @@ export function Guajajara() {
       srTitle="Sônia Guajajara — AHH Comunicação Política"
       headerSrc="/images/guaja/guaja-header.png"
       headerAlt="Sônia Guajajara — Deputada Federal"
-      lead="Sônia Guajajara (2026)"
-      subtitle="Deputada federal eleita"
+      lead="DEPUTADA FEDERAL ELEITA"
       items={ITEMS}
       dotColor="#00493C"
     />

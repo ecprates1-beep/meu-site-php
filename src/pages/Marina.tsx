@@ -12,7 +12,7 @@ export function Marina() {
       srTitle="Marina Silva — AHH Comunicação Política"
       headerSrc="/images/marina/marina-header.png"
       headerAlt="Marina Silva — Campanha 2026"
-      lead="Marina Silva"
+      lead="CANDIDATA A SENADORA"
       items={ITEMS}
       dotColor="#004433"
     />

@@ -13,8 +13,7 @@ export function Helio() {
       srTitle="Hélio Rodrigues — AHH Comunicação Política"
       headerSrc="/images/helio/helio-header.png"
       headerAlt="Hélio Rodrigues — Mandato Vereador 2026"
-      lead="Hélio Rodrigues (2026)"
-      subtitle="Mandato de vereador"
+      lead="MANDATO DE VEREADOR"
       items={ITEMS}
       dotColor="#0A3D91"
     />

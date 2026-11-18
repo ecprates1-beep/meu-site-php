@@ -13,8 +13,7 @@ export function Haddad() {
       srTitle="Fernando Haddad — AHH Comunicação Política"
       headerSrc="/images/haddad/haddad-header.png"
       headerAlt="Fernando Haddad — Presidência 2018"
-      lead="Fernando Haddad (2018)"
-      subtitle="Candidato a Presidência"
+      lead="CANDIDATO A PRESIDÊNCIA"
       items={ITEMS}
       dotColor="#002C8D"
     />
